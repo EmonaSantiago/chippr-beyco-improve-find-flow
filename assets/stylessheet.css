@@ -50,3 +50,41 @@
  text-align: center;
  color: #FFFFFF;
  }
+
+ .filterDiv {
+    float: left;
+    background-color: #3A8070;
+    color: #ffffff;
+    width: 100px;
+    line-height: 100px;
+    text-align: center;
+    margin: 2px;
+    display: none;
+  }
+
+  .show {
+      display: block;
+  }
+
+  .container {
+      margin-top: 20px;
+      overflow: hidden;
+  }
+  
+  /* Style The Buttons */
+  .btn {
+      border:burlywood;
+      outline: black;
+      padding: 12px 16px;
+      background-color:#3A8070;
+      cursor: pointer;
+  }
+
+  .btn:hover {
+      background-color: #ddd
+  }
+  
+  .btn.active {
+    background-color: #dddee0;
+    color: white;
+  }
