@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./stylessheet.css">
+    <link rel="Javascript" href="./Script.JS">
 </head>
 <body>
 <header>
@@ -18,70 +19,111 @@
 
       <h2>Filter DIV Elements</h2>
 
-<div id="myBtnContainer">
-  <button class="btn active" onclick="filterSelection('all')"> Show all </button>
-  <button class="btn" onclick="filterSelection('Kwantiteit')"> Kwantiteit </button>
-  <button class="btn" onclick="filterSelection('Bewerking')"> Bewerking </button>
-  <button class="btn" onclick="filterSelection('Kwaliteit')"> Kwaliteit </button>
- 
-  <div class="container">
-    <div class="filterDiv Kwantiteit">COUNTRIES</div>
-    <div class="filterDiv colors Bewerking">PROCESS</div>
-    <div class="filterDiv Kwaliteit">CERTIFICATIONS</div>
+      <button id="filterbutton0">Show all</button>
+      <button id="filterbutton1">Kwantiteit</button>
+      <button id="filterbutton2">Bewerking</button>
+      <Button id="filterbutton3">Kwaliteit</Button>
+     </ul>
 
-    </ul>
+     <form>
+        <fieldset id="filter_aantal" class="hide">
+         eerste filter met aantal
+        </fieldset>
+
+        <fieldset id="filter_bewerking" class="hide">
+        tweede filter met Bewerking
+        </fieldset>
+
+        <fieldset id="filter_kwaliteit" class="hide">
+        derde filter met kwaliteit instelingen 
+        </fieldset>
+
+        <button> submit</button>
+
+</form>
+
+
+<script>
+
+var button_showAantal = document.querySelector("#filterbutton1");
+var fieldset_aantal = document.querySelector("#filter_aantal");
+
+var button_showBewerking = document.querySelector("#filterbutton2");
+var fieldset_bewerking = document.querySelector("#filter_bewerking");
+console.log(button_showBewerking)
+console.log(fieldset_bewerking)
+
+var button_showKwaliteit = document.querySelector("#filterbutton3");
+var fieldset_kwaliteit = document.querySelector("#filter_kwaliteit");
+console.log(button_showKwaliteit)
+console.log(fieldset_kwaliteit)
+
+var button_showAll = document.querySelector("#filterbutton0")
+console.log(button_showAll)
+
+//  console.log (button_showAantal)
+//  console.log(fieldset_aantal)
+//  console.log(button_showBewerking)
+
+button_showAll.addEventListener("click", function(){
+   console.log("JA!")
+
+   if(button_showAll.textContent == "Show all"){
+       fieldset_aantal.classList.remove("hide")
+       fieldset_bewerking.classList.remove("hide")
+       fieldset_kwaliteit.classList.remove("hide")
+       button_showAll.textContent="Hide all"
+   }else if(button_showAll.textContent == "Hide all"){
+       fieldset_aantal.classList.add("hide")
+       fieldset_bewerking.classList.add("hide")
+       fieldset_kwaliteit.classList.add("hide")
+       button_showAll.textContent="Show all"
+   }
+
+})
+
+button_showAantal.addEventListener("click",function(){
+   console.log("ja!")
+
+   fieldset_aantal.classList.toggle("hide")
+
+})
+
+button_showBewerking.addEventListener("click",function(){
+   console.log("ja!")
+
+   fieldset_bewerking.classList.toggle("hide")
+
+})
+
+button_showKwaliteit.addEventListener("click",function(){
+   console.log("ja!")
+
+   fieldset_kwaliteit.classList.toggle("hide")
+
+})
+
+
+
+
+
+
+
+</script>
+
   </nav>
   
+    
+
+
   <article>
     <h1>COFFEES</h1>
-
   </article>
 
-  <script>
-    filterSelection("all")
-    function filterSelection(c) {
-      var x, i;
-      x = document.getElementsByClassName("filterDiv");
-      if (c == "all") c = "";
-      for (i = 0; i < x.length; i++) {
-        w3RemoveClass(x[i], "show");
-        if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
-      }
-    }
-    
-    function w3AddClass(element, name) {
-      var i, arr1, arr2;
-      arr1 = element.className.split(" ");
-      arr2 = name.split(" ");
-      for (i = 0; i < arr2.length; i++) {
-        if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
-      }
-    }
-    
-    function w3RemoveClass(element, name) {
-      var i, arr1, arr2;
-      arr1 = element.className.split(" ");
-      arr2 = name.split(" ");
-      for (i = 0; i < arr2.length; i++) {
-        while (arr1.indexOf(arr2[i]) > -1) {
-          arr1.splice(arr1.indexOf(arr2[i]), 1);     
-        }
-      }
-      element.className = arr1.join(" ");
-    }
-    
-    // Add active class to the current button (highlight it)
-    var btnContainer = document.getElementById("myBtnContainer");
-    var btns = btnContainer.getElementsByClassName("btn");
-    for (var i = 0; i < btns.length; i++) {
-      btns[i].addEventListener("click", function(){
-        var current = document.getElementsByClassName("active");
-        current[0].className = current[0].className.replace(" active", "");
-        this.className += " active";
-      });
-    }
-    </script>
-    
+
+
+
+
     
 </section>
 
