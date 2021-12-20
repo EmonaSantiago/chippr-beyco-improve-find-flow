@@ -1,6 +1,6 @@
-* { 
+ * { 
     box-sizing: border-box;
- }
+  }
  
  body{
      font-family: Arial, Helvetica, sans-serif;
@@ -8,7 +8,7 @@
  
  /* Style the header */
  header{
-     background-color:#3A8070 ;
+     background-color: #3A8070;
      padding: 30px;
      text-align: center;
      font-size: 35px;
@@ -18,7 +18,7 @@
  /* two colums/boxes that floats next to each other */
  nav{
      float: left;
-     width: 30%;
+     width: 20%;
      height: 500px;
      background: #F6F7F9;
      padding: 20px;
@@ -28,13 +28,12 @@
  nav ul{
      list-style-type: none;
      padding: 0%;
-     
  }
  
  article{
      float: left;
      padding: 20px;
-     width: 70%;
+     width: 80%;
      background-color: #D9D9D9;
      height: 500px;
  }
