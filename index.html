@@ -5,38 +5,72 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./stylessheet.css">
-    <link rel="Javascript" href="./Script.JS">
+    <link rel="stylesheet" href="./styles/stylessheet.css">
+    <link rel="Javascript" href="./scripts/Script.JS">
 </head>
 <body>
+
 <header>
     <h2>BEYCO HEADER</h2>
 </header>
 
 <section>
-  <nav>
+    <nav>
       <ul>
-          <h2> Filter DIV Elements </h2>
-  
-  
-              <button id="filterbutton0">Show all</button><br>
-              <button id="filterbutton1">Countries</button><br>
-              <button id="filterbutton2">Certifications</button><br>
-              <button id="filterbutton3">Species</button><br>
-              <button id="filterbutton4">Process</button><br>
-              <button id="filterbutton5">Grades</button><br>
-              <button id="filterbutton6">Cupping score</button><br>
-              <button id="filterbutton7">Quantity</button><br>
-              <button id="filterbutton8">Port of export</button><br>
-  
-      </ul>
-  
-        
-  
-      <script>
-  
+          <h2> Public Coffee Offers filter </h2>
+          
+              <button id="filterbutton0">Show all</button>
+              <button id="filterbutton1">Countries</button>
+              <button id="filterbutton2">Certifications</button>
+              <button id="filterbutton3">Species</button>
+              <button id="filterbutton4">Process</button>
+              <button id="filterbutton5">Grades</button>
+              <button id="filterbutton6">Cupping score</button>
+              <button id="filterbutton7">Quantity</button>
+              <button id="filterbutton8">Port of export</button>
+
+      </ul> 
+ 
+    <form>
+      <fieldset id="filter_countries" class="hide">
+      Countries examples
+      </fieldset>
+
+      <fieldset id="filter_certifications" class="hide">
+      Certifications examples
+      </fieldset>
+
+      <fieldset id="filter_species" class="hide">
+      Species examples
+      </fieldset>
+
+      <fieldset id="filter_process" class="hide">
+      Process examples
+      </fieldset>
+
+      <fieldset id="filter_grades" class="hide">
+      Grades examples
+      </fieldset>
+
+      <fieldset id="filter_cupping score" class="hide">
+      Cupping score examples
+      </fieldset>
+
+      <fieldset id="filter_quantity" class="hide">
+      Quantity examples
+      </fieldset>
+
+      <fieldset id="filter_port of export" class="hide">
+      Port of export examples
+      </fieldset>
+
+    </form>
+
+  <script>
+
               var button_showAantal = document.querySelector("#filterbutton0");
               var fieldset_aantal = document.querySelector("#filter_aantal");
+              console.log("HELLO!")
   
               var button_showCountries = document.querySelector("#filterbutton1");
               var fieldset_Countries = document.querySelector("#filter_countries");
@@ -62,9 +96,9 @@
               var button_showPortOfExport = document.querySelector("#filterbutton8");
               var fieldset_PortOfExport = document.querySelector("#filter_portofexport");
   
-              button_showAll.addEventListener("click", function(){
+              button_showAantal.addEventListener("click", function(){
   
-                  if(button_showAll.textContent == "Show all"){
+                  if(button_showAantal.textContent == "Show all"){
                   fieldset_Countries.classList.remove("hide")
                   fieldset_Certifications.classList.remove("hide")
                   fieldset_Species.classList.remove("hide")
@@ -87,15 +121,25 @@
                   }
                   })  
   
+      button_showAantal.addEventListener("click",function(){
+        console.log("ja!")
+
+      fieldset_Aantal.classList.toggle("hide")
+
+      })            
   
       button_showCountries.addEventListener("click",function(){
       console.log("ja!")
+
       fieldset_Countries.classList.toggle("hide")
+
       })
   
       button_showCertifications.addEventListener("click",function(){
       console.log("ja!")
+      
       fieldset_Certifications.classList.toggle("hide")
+
       })
   
       button_showSpecies.addEventListener("click",function(){
@@ -128,38 +172,15 @@
       fieldset_PortOfExport.classList.toggle("hide")
       })
   
-  
-  
-      </script>
-  
-  </nav>
+
+  </script>
+
+
   </section>
 
-  <article>
-    Coffees
-    <form>
-
-      <fieldset id="filter_countries" class="hide">Countries examples</fieldset>
-      <fieldset id="filter_certifications" class="hide">Certifications examples</fieldset>
-      <fieldset id="filter_species" class="hide">Species examples</fieldset>
-      <fieldset id="filter_process" class="hide">Process examples</fieldset>
-      <fieldset id="filter_grades" class="hide">Grades examples</fieldset>
-      <fieldset id="filter_cupping score" class="hide">Cupping score examples</fieldset>
-      <fieldset id="filter_quantity" class="hide">Quantity examples</fieldset>
-      <fieldset id="filter_port of export" class="hide">Port of export examples</fieldset>
-
-      <button> Submit </button>
-
-  </form>
-
-
-  </article>
-  
-
-
-<footer>
-  <p>Footer BEYCO</p>
-</footer>
+  <footer>
+    <p>Footer BEYCO</p>
+  </footer>
 
 </body>
 </html>
