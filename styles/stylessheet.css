@@ -1,37 +1,41 @@
-* {
+* { 
     box-sizing: border-box;
+ }
+ 
+ body{
+     font-family: Arial, Helvetica, sans-serif;
+     margin: 0%;
+ }
+ 
+ /* Style the header */
+ header{
+     background-color:#3A8070 ;
+     padding: 30px;
+     text-align: center;
+     font-size: 35px;
+     color:#FFFFFF;
+ }
+ 
+ nav{
+     float: left;
+     width: 30%;
+     height: 500px;
+     background: #F6F7F9;
+     padding: 20px;
+ }
+
+ nav ul{
+    list-style-type: none;
+    padding: 0%;   
+    text-align: center;
+    padding: 34px;
+}
+
+ul{
+    background-color: #f6f7f9;;
+    text-align: center;
     margin: 0%;
 }
-
-body{
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-/* Style the Header*/
-header{
-    background-color: #3a8070;
-    padding: 30px;
-    text-align: center;
-    font-size: 35px;
-    color: #FFFFFF;
-}
-
-/*nav two coloms/boxes that float next to each other */
-nav{
-    float: left;
-    padding: 20px;
-    width: 30%;
-    background-color: #f6f7f9;
-    height: 500px;
-}
-
-
-/*style the list inside the menu*/
-nav ul{
-    list-style-type: none;
-    padding: 0%;
-}
-
 
 article{
     float: left;
@@ -41,54 +45,37 @@ article{
     height: 500px;
 }
 
-button{
-    background-color: #3a8070;
-    display: block;
-    margin-top: 2px;
-}
-
 section::after{
     content: "";
-    display: table;
-    clear: both;
-}
+     display: table;
+     clear: both;
+ }
 
-.filterDiv {
-    float: left;
-    background-color: #3A8070;
-    color: #ffffff;
-    width: 100px;
-    line-height: 100px;
-    text-align: center;
-    margin: 2px;
-    display: none;
-  }
-  .show {
-      display: block;
-  }
-  .container {
-      margin-top: 20px;
-      overflow: hidden;
-  }
+
+ }
+ .show {
+     display: block;
+ }
+ .container {
+     margin-top: 20px;
+     overflow: hidden;
+ }
+ 
   /* Style The Buttons */
-  .btn {
-    outline: black;
-    padding: 5px 10px;
-    background-color:#3A8070;
-    cursor: pointer;
-}
-.btn:hover {
+
+
+  .btn:hover {
     background-color: #ddd
 }
 
 .btn.active {
   background-color: #dddee0;
-  color: white;
-}
+   color: white;
+ }
 
-footer{
+ footer{
     background-color: #3A8070;
-    padding: 30px;
+    padding: 60px;
     text-align: center;
     color: #FFFFFF;
     }
@@ -97,16 +84,22 @@ footer{
         /* display: none; */
         margin: 1em;
         padding: 1em;
-        background: #3A8070;
-        color: white;
+        background: #ffffff;
+        color: black;
     }
+
+button{
+    display: block;
+    border-color: #dddee0;;
+    outline: black;
+    padding: 5px 10px;
+    background-color:#ffffff;
+    cursor: pointer;
+    margin: 5px;
+}
 
     .hide{
        /* background: pink; */
        display: none;
     } 
-
-  
-  
-  
-
+    
