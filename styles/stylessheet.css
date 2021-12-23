@@ -18,12 +18,12 @@
 
 nav{
     float: left;
-     width: 30%;
+     width: 40%;
      height: auto;
      background: white;
      list-style-type: none;  
      text-align: center;
-     padding: 34px;
+     padding: 60px;
 }
 
 nav ul{
@@ -45,9 +45,10 @@ nav ul{
   }
 
 article{
+    
     float: right;
-    padding: 20px;
-    width: 70%;
+    padding: 75px;
+    width: 50%;
     background-color: white;
     height: auto;
 }
@@ -90,15 +91,17 @@ section::after{
     fieldset{
         /* display: none; */
         padding: 1em;
-        background: #ffffff;
+        background: white;
         color: black;
         border-radius: 0.2rem; 
         border-bottom: 0.15rem solid #000000;
+        border-color: #dddee0;
         padding: .5rem;
         border-radius: 0.2rem;
         width: 300px;
         height: 300px;
         margin-bottom: 1.5rem;
+        text-align: center;
     }
 
     button {
