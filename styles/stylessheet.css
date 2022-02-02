@@ -30,6 +30,7 @@ nav ul{
     padding-left: 0%;
     padding-top: 2%;
     background: #F6F7F9;
+    
 }
 
 .navbar{
@@ -94,10 +95,9 @@ section::after{
         background: white;
         color: black;
         border-radius: 0.2rem; 
-        border-bottom: 0.15rem solid #000000;
         border-color: #dddee0;
+        border-width: 5px;
         padding: .5rem;
-        border-radius: 0.2rem;
         width: 300px;
         height: 300px;
         margin-bottom: 1.5rem;
